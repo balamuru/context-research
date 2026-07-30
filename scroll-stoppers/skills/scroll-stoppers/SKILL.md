@@ -62,7 +62,11 @@ Read the ranked JSON (focus on the top-ranked items per platform — don't
 ignore lower-engagement items with strong signal, but engagement rank is
 your primary lens). Extract:
 
-- **Hooks** — the literal opening line/title/caption that stopped the scroll.
+- **Hooks** — the literal opening line/title/caption that stopped the scroll,
+  plus a one-line **mini idea**: a concise, concrete way to reuse that exact
+  hook (e.g. what to swap in, what angle to shoot it from). Keep it
+  implementable in one sentence — this is a smaller, faster companion to the
+  3 `make_next` ideas below, not a replacement for them.
 - **Pain points** — problems in the customer's *exact words*. Don't sanitize
   or paraphrase them into marketing-speak.
 - **Desires** — the outcome they explicitly say they want.
@@ -88,7 +92,7 @@ Write a JSON file (e.g. `/tmp/scroll_stoppers_brief.json`) matching this shape:
 {
   "niche": "string",
   "generated_at": "ISO 8601 timestamp",
-  "hooks": [{"text": "", "platform": "", "url": "", "author": ""}],
+  "hooks": [{"text": "", "platform": "", "url": "", "author": "", "mini_idea": ""}],
   "pains": [{"quote": "", "platforms": ["reddit", "tiktok"], "urls": ["", ""]}],
   "desires": [{"text": "", "platform": "", "url": ""}],
   "objections": [{"text": "", "platform": "", "url": ""}],

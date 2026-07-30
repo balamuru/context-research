@@ -70,6 +70,13 @@ h2 { font-size: 1.2rem; margin-top: 2.5rem; border-bottom: 1px solid #333; paddi
   background: rgba(255,255,255,0.06); padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.9rem;
 }
 .make-next-card { border-left-color: #fbbf24; }
+.mini-idea {
+  margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px dashed rgba(255,255,255,0.15);
+  font-size: 0.85rem; color: #d4d4dc;
+}
+@media (prefers-color-scheme: light) {
+  .mini-idea { border-top: 1px dashed #e2e2e6; color: #444; }
+}
 .meta { font-size: 0.75rem; color: #9a9aa5; margin-top: 0.5rem; }
 """
 
@@ -86,10 +93,13 @@ def _tag(platform: str) -> str:
 def render_hooks(hooks: list[dict]) -> str:
     cards = []
     for h in hooks:
+        mini_idea = h.get("mini_idea", "")
+        idea_html = f'<div class="mini-idea">💡 {_esc(mini_idea)}</div>' if mini_idea else ""
         cards.append(
             f'<div class="card" style="border-left-color:{PLATFORM_COLORS.get(h.get("platform",""), "#888")}">'
             f'{_tag(h.get("platform",""))}'
             f'<div>{_esc(h.get("text",""))}</div>'
+            f'{idea_html}'
             f'<div class="meta"><a href="{_esc(h.get("url",""))}" target="_blank">{_esc(h.get("author",""))}</a></div>'
             f'</div>'
         )
