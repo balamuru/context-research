@@ -2,6 +2,8 @@
 
 *How combining deterministic Python scripts with AI creative intelligence turns raw engagement metrics across Reddit, YouTube, TikTok, and Instagram into actionable content briefs. Source code available on [GitHub](https://github.com/balamuru/context-research).*
 
+![AI-Powered Social Media Research Cover Image](./blog_cover.jpg)
+
 ---
 
 Every creator, marketer, and founder knows the feeling: you need content ideas, so you open TikTok or Instagram Reels and start "researching." Two hours later, you've fallen down a rabbit hole of viral clips, saved three random videos, and gained zero structured insights into *why* certain topics work or *what* your target audience actually cares about.
