@@ -33,7 +33,7 @@ Given the user's request (a niche, product, or question), figure out:
 Call the orchestrator with the resolved targets:
 
 ```bash
-python3 ${CLAUDE_PLUGIN_ROOT}/skills/scroll-stoppers/scripts/scroll_stoppers.py \
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/scroll-stoppers/scripts/orchestrator.py \
   --niche "<niche>" \
   --subreddits <sub1> <sub2> ... \
   --search-terms "<term1>" "<term2>" ... \
@@ -111,7 +111,7 @@ which evidence backs the idea.
 ### 5. Render the dashboard
 
 ```bash
-python3 ${CLAUDE_PLUGIN_ROOT}/skills/scroll-stoppers/scripts/render.py \
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/scroll-stoppers/scripts/renderer.py \
   --brief /tmp/scroll_stoppers_brief.json \
   --out /tmp/scroll_stoppers_dashboard.html
 ```

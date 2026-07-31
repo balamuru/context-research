@@ -5,10 +5,10 @@ Each fetch_* function returns a list of normalized dicts:
     {platform, text, author, url, date, engagement, raw}
 
 `date` is an ISO 8601 string (UTC). `engagement` is a single comparable
-number (see analyze.py for how it's put on a common scale across platforms).
+number (see ranker.py for how it's put on a common scale across platforms).
 
 This module only fetches and normalizes. It never interprets or ranks
-content — that's split across analyze.py (ranking) and the SKILL.md
+content — that's split across ranker.py (ranking) and the SKILL.md
 instructions Claude follows (mining).
 """
 

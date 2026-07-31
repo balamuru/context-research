@@ -1,9 +1,0 @@
-__pycache__/
-*.pyc
-
-# Runtime outputs (ranked data, mined briefs, rendered dashboards)
-*.json
-*.html
-!.claude-plugin/plugin.json
-
-.env

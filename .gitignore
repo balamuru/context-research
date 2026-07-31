@@ -1,12 +1,14 @@
-# Claude Code local/session state - machine and session specific, never share
+# Claude Code local/session state
 .claude/settings.local.json
 .claude/scheduled_tasks.lock
 
 # Python
 __pycache__/
 *.pyc
+.env
 
-# Generated engine outputs (ranked data, mined briefs, rendered dashboards) -
-# regenerate by running the scroll-stoppers plugin against a niche, see
-# scroll-stoppers/README.md
+# Generated engine outputs
 output/
+*.json
+*.html
+!.claude-plugin/plugin.json

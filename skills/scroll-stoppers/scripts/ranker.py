@@ -1,5 +1,5 @@
 """
-Normalize and rank items pulled from sources.py.
+Normalize and rank items pulled from fetchers.py.
 
 Engagement scales are wildly different across platforms (a TikTok can get
 millions of plays, a Reddit thread gets thousands of upvotes). We put them on

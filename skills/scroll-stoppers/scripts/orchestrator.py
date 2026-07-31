@@ -6,7 +6,7 @@ No LLM calls happen here — Claude does the mining afterwards, reading the
 JSON this script writes, per SKILL.md.
 
 Usage:
-    python3 scroll_stoppers.py \\
+    python3 orchestrator.py \\
         --niche "cold plunge tubs" \\
         --subreddits coldplunge biohackers \\
         --search-terms "cold plunge" "ice bath" \\
@@ -24,8 +24,8 @@ import argparse
 import json
 import sys
 
-from analyze import rank_items, summarize_by_platform
-from sources import fetch_instagram, fetch_reddit, fetch_tiktok, fetch_youtube
+from ranker import rank_items, summarize_by_platform
+from fetchers import fetch_instagram, fetch_reddit, fetch_tiktok, fetch_youtube
 
 
 def main() -> int:

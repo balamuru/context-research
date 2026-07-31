@@ -18,7 +18,7 @@ Expected input JSON shape (the "mined brief"):
 }
 
 Usage:
-    python3 render.py --brief /tmp/brief.json --out /tmp/dashboard.html
+    python3 renderer.py --brief /tmp/brief.json --out /tmp/dashboard.html
 """
 
 from __future__ import annotations
