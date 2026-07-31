@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Orchestrator for scroll-stoppers. This is the deterministic half of the
+Orchestrator for context-research. This is the deterministic half of the
 pipeline: fetch from all four platforms, normalize, rank, write JSON.
 No LLM calls happen here — Claude does the mining afterwards, reading the
 JSON this script writes, per SKILL.md.
@@ -11,7 +11,7 @@ Usage:
         --subreddits coldplunge biohackers \\
         --search-terms "cold plunge" "ice bath" \\
         --creator-handles coldplungeguy icebathqueen \\
-        --out /tmp/scroll_stoppers_ranked.json
+        --out /tmp/context_research_ranked.json
 
 All targets (subreddits, search terms, creator handles) must already be
 resolved from the fuzzy niche before calling this script — that resolution

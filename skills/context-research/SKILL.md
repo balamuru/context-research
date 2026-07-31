@@ -1,9 +1,9 @@
 ---
-name: scroll-stoppers
+name: context-research
 description: Mines the hooks, angles, and exact customer language getting engagement across Reddit, YouTube, TikTok, and Instagram Reels, then writes a content brief telling you what to make next. Use when the user wants content ideas, hooks, ad angles, or research for a niche/product.
 ---
 
-# Scroll Stoppers — content research engine
+# Context Research — content research engine
 
 You are a creative strategist, not a summarizer. The engine (Python scripts
 in `scripts/`) fetches and ranks content deterministically — it never
@@ -33,13 +33,13 @@ Given the user's request (a niche, product, or question), figure out:
 Call the orchestrator with the resolved targets:
 
 ```bash
-python3 ${CLAUDE_PLUGIN_ROOT}/skills/scroll-stoppers/scripts/orchestrator.py \
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/context-research/scripts/orchestrator.py \
   --niche "<niche>" \
   --subreddits <sub1> <sub2> ... \
   --search-terms "<term1>" "<term2>" ... \
   --creator-handles <handle1> <handle2> ... \
   --relevance-keywords <kw1> <kw2> ... \
-  --out /tmp/scroll_stoppers_ranked.json
+  --out /tmp/context_research_ranked.json
 ```
 
 Requires `APIFY_API_TOKEN` to be set in the environment (for YouTube, TikTok,
@@ -86,7 +86,7 @@ a one-off. Note which platforms it appeared on.
 
 ### 4. Write the mined brief
 
-Write a JSON file (e.g. `/tmp/scroll_stoppers_brief.json`) matching this shape:
+Write a JSON file (e.g. `/tmp/context_research_brief.json`) matching this shape:
 
 ```json
 {
@@ -111,9 +111,9 @@ which evidence backs the idea.
 ### 5. Render the dashboard
 
 ```bash
-python3 ${CLAUDE_PLUGIN_ROOT}/skills/scroll-stoppers/scripts/renderer.py \
-  --brief /tmp/scroll_stoppers_brief.json \
-  --out /tmp/scroll_stoppers_dashboard.html
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/context-research/scripts/renderer.py \
+  --brief /tmp/context_research_brief.json \
+  --out /tmp/context_research_dashboard.html
 ```
 
 Tell the user the output path and that they can open it directly in a

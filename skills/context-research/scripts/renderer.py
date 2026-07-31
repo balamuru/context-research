@@ -183,11 +183,11 @@ def render_dashboard(brief: dict) -> str:
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Scroll Stoppers — {niche}</title>
+    <title>Context Research — {niche}</title>
 <style>{CSS}</style>
 </head>
 <body>
-<h1>Scroll Stoppers: {niche}</h1>
+    <h1>Context Research: {niche}</h1>
 <div class="subtitle">Generated {generated_at}</div>
 
 <h2>Hooks to steal</h2>

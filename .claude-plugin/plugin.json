@@ -1,11 +1,11 @@
 {
-  "name": "scroll-stoppers",
+  "name": "context-research",
   "version": "0.1.0",
   "description": "Mines the hooks, angles, and exact customer language getting engagement across Reddit, YouTube, TikTok, and Instagram Reels, then writes a content brief telling you what to make next.",
   "author": {
     "name": "vinayb"
   },
   "skills": [
-    "./skills/scroll-stoppers"
+    "./skills/context-research"
   ]
 }

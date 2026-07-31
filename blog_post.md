@@ -10,7 +10,7 @@ Every creator, marketer, and founder knows the feeling: you need content ideas, 
 
 Manual content research is broken. It's biased by algorithm recommendations, impossible to quantify across different platforms, and deeply exhausting.
 
-To solve this, I built **Scroll Stoppers** — a Claude Code plugin and Python engine designed to automate niche content research. 
+To solve this, I built **Context Research** — a Claude Code plugin and Python engine designed to automate niche content research. 
 
 Here is how it works under the hood, why we chose a hybrid deterministic-AI architecture, and how you can build similar tools for your workflow.
 
@@ -22,7 +22,7 @@ When building AI-powered tools, the most common trap is asking the LLM to do eve
 
 Asking an LLM to scrape web pages, calculate engagement metrics, or compare raw numbers across platforms leads to hallucinated data, high costs, and unreliable output. On the flip side, pure code can fetch numbers all day, but it will never understand *human emotion* — why a specific opening phrase stopped someone from scrolling, or why a customer pain point hits a nerve.
 
-**Scroll Stoppers** relies on a strict separation of concerns:
+**Context Research** relies on a strict separation of concerns:
 
 1. **Deterministic Python Engine**: Handles API calls, log-scale engagement normalization, and recency sorting. Cheap, fast, and 100% accurate.
 2. **Claude Code Creative Intelligence**: Acts as a senior creative strategist. It resolves fuzzy topics into targets, mines the top-ranked content for emotional hooks and customer language, and generates actionable content briefs.
@@ -78,7 +78,7 @@ To keep the codebase maintainable, modular, and portable as a Claude Code plugin
 ├── .claude-plugin/
 │   └── plugin.json            # Plugin manifest for Claude Code
 └── skills/
-    └── scroll-stoppers/
+    └── context-research/
         ├── SKILL.md            # Mining rules & LLM workflow
         └── scripts/
             ├── fetchers.py     # Platform scrapers (Reddit, YT, TikTok, IG)

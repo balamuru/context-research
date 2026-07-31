@@ -1,4 +1,4 @@
-# Scroll Stoppers
+# Context Research
 
 A Claude Code plugin that turns a fuzzy niche into a content research brief.
 Give it a topic, and it pulls what's winning right now on Reddit, YouTube,
@@ -38,7 +38,7 @@ Resolve → Fan out → Rank → Mine → Brief
 ├── .claude-plugin/
 │   └── plugin.json          # plugin manifest
 └── skills/
-    └── scroll-stoppers/
+    └── context-research/
         ├── SKILL.md          # the workflow + mining rules Claude follows
         └── scripts/
             ├── fetchers.py         # 4 platform fetchers
@@ -66,7 +66,7 @@ export APIFY_API_TOKEN="your-apify-token-here"
 
 Install the plugin in Claude Code, then just chat naturally:
 
-> find scroll stoppers for cold plunge tubs
+> research context for cold plunge tubs
 
 > what should I make about magnesium for sleep?
 
@@ -81,7 +81,7 @@ summary of the top findings.
 For debugging or a dry run without going through Claude:
 
 ```bash
-cd skills/scroll-stoppers/scripts
+cd skills/context-research/scripts
 
 python3 orchestrator.py \
   --niche "cold plunge tubs" \

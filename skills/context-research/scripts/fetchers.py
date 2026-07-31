@@ -1,5 +1,5 @@
 """
-Platform fetchers for scroll-stoppers.
+Platform fetchers for context-research.
 
 Each fetch_* function returns a list of normalized dicts:
     {platform, text, author, url, date, engagement, raw}
@@ -24,7 +24,7 @@ import requests
 APIFY_TOKEN_ENV = "APIFY_API_TOKEN"
 APIFY_BASE = "https://api.apify.com/v2"
 
-USER_AGENT = "scroll-stoppers-research-bot/1.0"
+USER_AGENT = "context-research-bot/1.0"
 
 
 def _now_iso() -> str:
